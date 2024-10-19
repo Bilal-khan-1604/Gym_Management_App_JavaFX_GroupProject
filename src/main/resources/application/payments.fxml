@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" styleClass="bgAnchorPane" stylesheets="@../styles/base.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gymManagement.application.PaymentsController">
+   <children>
+      <AnchorPane layoutX="5.666666666666667" prefHeight="500.0" prefWidth="623.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="69.0" prefHeight="423.0" prefWidth="571.0" style="-fx-border-color: #ffffff;">
+               <children>
+               	
+                  <Label layoutX="14.0" layoutY="83.0" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #c0c0c0;" text="Fee Received :">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="receivedFee" alignment="CENTER_RIGHT" layoutX="164.0" layoutY="83.0" prefHeight="40.0" prefWidth="99.0" style="-fx-background-color: #c0c0c0;">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="173.0" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #c0c0c0;" text="Salaries:">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="25.0" layoutY="14.0" prefHeight="54.0" prefWidth="523.0" text="Monthly Financial Metrics and Billing Overview" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="Times New Roman" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="263.0" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #c0c0c0;" text="Retail Sales:">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="353.0" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #c0c0c0;" text="Locker Rentals:">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="receivedFee1" alignment="CENTER_RIGHT" layoutX="164.0" layoutY="173.0" prefHeight="40.0" prefWidth="99.0" style="-fx-background-color: #c0c0c0;">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="receivedFee11" alignment="CENTER_RIGHT" layoutX="164.0" layoutY="263.0" prefHeight="40.0" prefWidth="99.0" style="-fx-background-color: #c0c0c0;">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="receivedFee111" alignment="CENTER_RIGHT" layoutX="164.0" layoutY="353.0" prefHeight="40.0" prefWidth="99.0" style="-fx-background-color: #c0c0c0;">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="salaries" layoutX="173.0" layoutY="176.0" prefHeight="34.0" prefWidth="89.0" style="-fx-background-color: #c0c0c0;" />
+                  <TextField fx:id="retail_sales" layoutX="173.0" layoutY="266.0" prefHeight="34.0" prefWidth="89.0" style="-fx-background-color: #c0c0c0;" />
+                  <TextField fx:id="locker_rentals" layoutX="173.0" layoutY="356.0" prefHeight="34.0" prefWidth="89.0" style="-fx-background-color: #c0c0c0;" />
+                  <ComboBox fx:id="monthSelector" layoutX="357.0" layoutY="133.0" prefWidth="150.0" />
+                  <Label layoutX="307.0" layoutY="263.0" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #c0c0c0;" text="Penalties:">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="receivedFee12" alignment="CENTER_RIGHT" layoutX="457.0" layoutY="263.0" prefHeight="40.0" prefWidth="99.0" style="-fx-background-color: #c0c0c0;">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="307.0" layoutY="353.0" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #c0c0c0;" text="Outstanding Blance:">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="receivedFee121" alignment="CENTER_RIGHT" layoutX="457.0" layoutY="353.0" prefHeight="40.0" prefWidth="99.0" style="-fx-background-color: #c0c0c0;">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="penalties" layoutX="462.0" layoutY="266.0" prefHeight="34.0" prefWidth="89.0" style="-fx-background-color: #c0c0c0;" />
+                  <TextField fx:id="outstanding_balance" layoutX="462.0" layoutY="356.0" prefHeight="34.0" prefWidth="89.0" style="-fx-background-color: #c0c0c0;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="13.248046875" layoutY="8.0">
+               <children>
+                  <Label layoutX="7.0" layoutY="-10.0" prefHeight="54.0" prefWidth="131.0" text="LEGACY" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="Gabriola" size="44.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="12.24" radius="6.35" width="15.16">
+                           <color>
+                              <Color red="0.6929824352264404" green="0.6929824352264404" blue="0.6929824352264404" />
+                           </color>
+                        </DropShadow>
+                     </effect></Label>
+                  <Label layoutX="132.0" layoutY="9.0" text="THE FITNESS CLUB" textFill="WHITE">
+                     <font>
+                        <Font name="FontAwesome" size="20.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="451.751953125" layoutY="10.0" text="Payments Tab" textFill="#f6f2f2">
+                     <font>
+                        <Font name="Calibri Italic" size="20.0" />
+                     </font></Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

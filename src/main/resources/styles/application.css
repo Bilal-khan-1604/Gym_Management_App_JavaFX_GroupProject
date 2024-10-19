@@ -1,0 +1,55 @@
+
+
+.main-pane{
+	-fx-background-color:linear-gradient(to bottom right , #fff6ae ,#ffe1e1)
+
+}
+.cross {
+    -fx-background-color: transparent; /* Transparent background */
+    -fx-background-radius: 50%; /* Make it round */
+
+    -fx-border-color: black; /* Border color */
+    -fx-border-width: 2px; /* Border width */
+
+    -fx-min-width: 20px; /* Minimum width */
+    -fx-min-height: 20px; /* Minimum height */
+    -fx-max-width: 20px; /* Maximum width */
+    -fx-max-height: 20px; /* Maximum height */
+
+}
+
+/* Hover effect for the close button */
+.cross:hover {
+    -fx-background-color: lightgray; /* Light gray background on hover */
+}
+
+.user-pass{
+    -fx-background-radius: 25%; /* Makes the corners 25% round */
+    -fx-background-color: white; /* Background color of the text field */
+    -fx-padding: 5px; /* Padding to ensure enough space for the circles */
+    -fx-border-width: 10px;
+}
+.user-in{
+    -fx-background-radius: 25%; /* Makes the corners 25% round */
+    -fx-background-color: white; /* Background color of the text field */
+    -fx-padding: 5px; /* Padding to ensure enough space for the circles */
+    -fx-border-width: 10px;	
+}
+.signin{
+    -fx-background-color: linear-gradient(#ce48f5, 	#b857ea);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+.login{
+    -fx-background-color: linear-gradient(#ce48f5, 	#b857ea);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+.cancel-cross{
+	-fx-background-color: linear-gradient(#ce48f5, 	#b857ea);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}

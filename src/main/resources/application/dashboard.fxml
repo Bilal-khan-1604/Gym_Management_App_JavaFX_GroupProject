@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+            prefWidth="650.0" styleClass="bgAnchorPane" xmlns="http://javafx.com/javafx/22"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="gymManagement.application.DashboardController">
+   <stylesheets>
+      <URL value="@../styles/dashboard.css"/>
+      <URL value="@../styles/base.css"/>
+   </stylesheets>
+   <AnchorPane layoutX="21.0" prefHeight="500.0" prefWidth="623.0" AnchorPane.bottomAnchor="0.0"
+               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="19.0" layoutY="14.0" prefHeight="51.0" prefWidth="569.0">
+         <Label layoutX="7.0" layoutY="-10.0" prefHeight="54.0" prefWidth="131.0" text="LEGACY" textFill="WHITE"
+                underline="true">
+            <font>
+               <Font name="Gabriola" size="44.0"/>
+            </font>
+            <effect>
+               <DropShadow height="12.24" radius="6.35" width="15.16">
+                  <color>
+                     <Color red="0.6929824352264404" green="0.6929824352264404" blue="0.6929824352264404"/>
+                  </color>
+               </DropShadow>
+            </effect>
+         </Label>
+         <Label layoutX="132.0" layoutY="9.0" text="THE FITNESS CLUB" textFill="WHITE">
+            <font>
+               <Font name="FontAwesome" size="20.0"/>
+            </font>
+         </Label>
+         <Label alignment="CENTER" layoutX="469.751953125" layoutY="10.0" text="Dashboard" textAlignment="JUSTIFY"
+                textFill="#f6f2f2">
+            <font>
+               <Font name="Calibri Italic" size="20.0"/>
+            </font>
+         </Label>
+      </AnchorPane>
+      <AnchorPane layoutX="-2.666666030883789" layoutY="70.0">
+         <AnchorPane layoutX="26.66666603088379" prefHeight="90.0" prefWidth="166.0"
+                     style="-fx-background-color: cyan;">
+            <Label layoutX="43.0" layoutY="45.0" prefHeight="31.0" prefWidth="109.0" text="Total Members">
+               <font>
+                  <Font size="16.0"/>
+               </font>
+            </Label>
+            <Label fx:id="totalMembersLabel" layoutX="66.0" layoutY="14.0" prefHeight="43.0" prefWidth="63.0" text="00">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="31.0"/>
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="13.0" layoutY="49.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <Image url="@../images_and_icons/membersIcon.png"/>
+               <!-- <Image url="membersIcon.png" /> -->
+            </ImageView>
+         </AnchorPane>
+         <AnchorPane layoutX="211.6666660308838" prefHeight="90.0" prefWidth="166.0"
+                     style="-fx-background-color: cyan;">
+            <Label layoutX="37.0" layoutY="42.0" prefHeight="31.0" prefWidth="124.0" text="Available Trainers">
+               <font>
+                  <Font name="Symbol" size="16.0"/>
+               </font>
+            </Label>
+            <Label fx:id="trainersLabel" layoutX="64.0" layoutY="14.0" prefHeight="43.0" prefWidth="63.0" text="00">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="31.0"/>
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="9.0" layoutY="48.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <Image url="@../images_and_icons/trainerIcon.png"/>
+               <!-- <Image url="trainerIcon.png" /> -->
+            </ImageView>
+         </AnchorPane>
+         <AnchorPane layoutX="26.66666603088379" layoutY="131.0" prefHeight="285.0" prefWidth="351.0"
+                     style="-fx-background-color: #c0c0c0;">
+            <BarChart fx:id="barChart" layoutX="-27.0" layoutY="-39.0" prefHeight="310.0" prefWidth="392.0"
+                      style="-fx-background-color: #c0c0c0;" title="Members"
+                      AnchorPane.bottomAnchor="14.333333333333314" AnchorPane.leftAnchor="-27.0"
+                      AnchorPane.rightAnchor="-13.666666666666686" AnchorPane.topAnchor="-39.0">
+               <xAxis>
+                  <CategoryAxis label="FEE-Status" side="BOTTOM" style="-fx-background-color: #c0c0c0;"/>
+               </xAxis>
+               <yAxis>
+                  <NumberAxis label="No. Of Members" side="LEFT" style="-fx-background-color: #c0c0c0;"/>
+               </yAxis>
+            </BarChart>
+         </AnchorPane>
+         <AnchorPane layoutX="398.6666660308838" prefHeight="421.0" prefWidth="199.0"
+                     style="-fx-background-color: cyan;">
+            <PieChart fx:id="pieChart" layoutY="85.0" prefHeight="310.0" prefWidth="200.0"
+                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+            <Label layoutX="56.0" layoutY="14.0" prefHeight="31.0" prefWidth="124.0" text="Equipments">
+               <font>
+                  <Font name="Symbol" size="23.0"/>
+               </font>
+            </Label>
+            <Label fx:id="equipmentLabel" layoutX="81.0" layoutY="45.0" prefHeight="43.0" prefWidth="63.0"
+                   text="00">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="31.0"/>
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="31.0" layoutX="22.0" layoutY="21.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <Image url="@../images_and_icons/equipmentsIcon.png"/>
+               <!-- <Image url="equipmentsIcon.png" /> -->
+            </ImageView>
+         </AnchorPane>
+      </AnchorPane>
+   </AnchorPane>
+</AnchorPane>
