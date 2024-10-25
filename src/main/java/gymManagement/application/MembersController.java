@@ -105,7 +105,7 @@ public class MembersController implements Initializable {
                 pst.setString(3, status.getText());
                 pst.executeUpdate();
 
-                Main.showAlert(Alert.AlertType.INFORMATION, "Member Added", null, name + " has been added as a member of this gym.");
+                Main.showAlert(Alert.AlertType.INFORMATION, "Member Added", null, name.getText() + " has been added as a member of this gym.");
                 clearFormFields();
                 loadTableData();
             }
@@ -149,7 +149,7 @@ public class MembersController implements Initializable {
                 pst.setInt(4, id);
                 pst.executeUpdate();
 
-                Main.showAlert(Alert.AlertType.INFORMATION, "Member Updated", null, "Member record \"" + name + "\" has been updated.");
+                Main.showAlert(Alert.AlertType.INFORMATION, "Member Updated", null, "Member record \"" + name.getText() + "\" has been updated.");
                 clearFormFields();
                 loadTableData();
             }
