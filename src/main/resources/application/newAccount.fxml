@@ -58,7 +58,7 @@
             </Label>
          </AnchorPane>
          <AnchorPane layoutX="146.0" layoutY="10.0">
-            <TextField layoutY="2.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter your name" style="-fx-border-width: 1em;" stylesheets="@../styles/application.css" />
+            <TextField layoutY="2.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter your name" style="-fx-border-width: 1em;" />
             <DatePicker fx:id="accountDatePicker" layoutX="3.0" layoutY="46.0" prefHeight="25.0" prefWidth="216.0" promptText="Select date" />
             <AnchorPane layoutX="3.0" layoutY="92.0">
                <RadioButton fx:id="maleRadioButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="85.0" text="Male" textFill="WHITE">
