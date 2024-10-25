@@ -71,8 +71,8 @@ public class DashboardController implements Initializable {
 
 			if (rs.next()) {
 				totalMembersLabel.setText(rs.getString("total"));
-				paidMembers = rs.getInt("paid");
-				unpaidMembers = rs.getInt("unpaid");
+				paidMembers = rs.getInt("Paid");
+				unpaidMembers = rs.getInt("Unpaid");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();  // Replace with logger if needed
@@ -96,7 +96,7 @@ public class DashboardController implements Initializable {
 		String query = "SELECT " +
 				"COUNT(*) AS total, " +
 				"SUM(CASE WHEN status = 'active' THEN 1 ELSE 0 END) AS active, " +
-				"SUM(CASE WHEN status = 'inactive' THEN 1 ELSE 0 END) AS inactive " +
+				"SUM(CASE WHEN status = 'in-active' THEN 1 ELSE 0 END) AS inactive " +
 				"FROM equipments";
 		try (PreparedStatement pst = con.prepareStatement(query);
 			 ResultSet rs = pst.executeQuery()) {
