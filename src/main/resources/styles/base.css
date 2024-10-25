@@ -25,3 +25,42 @@
 .bgAnchorPane{
 	-fx-background-color: #555555;
 }
+
+.main-pane{
+	-fx-background-color: #555555;
+}
+
+.user-pass, .user-in{
+    -fx-background-radius: 30;
+    -fx-background-color: white;
+    -fx-padding: 15px;
+    -fx-border-width: 10px;
+}
+
+.login {
+    -fx-background-color: linear-gradient(#ce48f5, #b857ea);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+
+.login, .signupForLFC {
+    -fx-cursor: hand;
+}
+
+.signupForLFC:hover{
+    -fx-underline: true;
+}
+
+.createAccount{
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+
+.login:hover, .createAccount:hover {
+    -fx-effect: innershadow(two-pass-box, rgba( 115, 69, 125, 0.5), 10, 0.5, 0, 0);
+}
+
+.backButton {
+}
