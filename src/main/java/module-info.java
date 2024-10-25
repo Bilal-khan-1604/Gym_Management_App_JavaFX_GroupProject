@@ -9,6 +9,4 @@ module GymManagementApp {
     requires org.jetbrains.annotations;
 
     opens gymManagement.application;
-//    opens application to javafx.fxml;
-//    exports gymManagement.application;
 }
