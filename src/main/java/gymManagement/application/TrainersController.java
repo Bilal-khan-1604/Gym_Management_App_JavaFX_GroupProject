@@ -10,11 +10,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
@@ -23,13 +21,10 @@ import javafx.scene.control.TextField;
 public class TrainersController implements Initializable {
 
     @FXML
-    private Button add, delete, update;
+    private TextField name, mobile, service, charges;
 
     @FXML
-    private TextField tname, tmobile, tservice, tcharges;
-
-    @FXML
-    private TableColumn<TrainerModel, String> idt, namet, mobt, servicet, chargest;
+    private TableColumn<TrainerModel, String> id_column, name_column, mobile_column, service_column, charges_column;
 
     @FXML
     private TableView<TrainerModel> table;
@@ -65,28 +60,28 @@ public class TrainersController implements Initializable {
             }
 
             table.setItems(trainers);
-            idt.setCellValueFactory(f -> f.getValue().idProperty());
-            namet.setCellValueFactory(f -> f.getValue().nameProperty());
-            mobt.setCellValueFactory(f -> f.getValue().mobileProperty());
-            servicet.setCellValueFactory(f -> f.getValue().serviceProperty());
-            chargest.setCellValueFactory(f -> f.getValue().chargesProperty());
+            id_column.setCellValueFactory(f -> f.getValue().idProperty());
+            name_column.setCellValueFactory(f -> f.getValue().nameProperty());
+            mobile_column.setCellValueFactory(f -> f.getValue().mobileProperty());
+            service_column.setCellValueFactory(f -> f.getValue().serviceProperty());
+            charges_column.setCellValueFactory(f -> f.getValue().chargesProperty());
         } catch (SQLException ex) {
             Logger.getLogger(TrainersController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     private void setTableRowSelection() {
-        table.setRowFactory(tv -> {
+        table.setRowFactory(_ -> {
             TableRow<TrainerModel> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 1 && !row.isEmpty()) {
                     myIndex = table.getSelectionModel().getSelectedIndex();
                     TrainerModel selectedTrainer = table.getItems().get(myIndex);
                     id = Integer.parseInt(selectedTrainer.getId());
-                    tname.setText(selectedTrainer.getName());
-                    tmobile.setText(selectedTrainer.getMobile());
-                    tservice.setText(selectedTrainer.getService());
-                    tcharges.setText(selectedTrainer.getCharges());
+                    name.setText(selectedTrainer.getName());
+                    mobile.setText(selectedTrainer.getMobile());
+                    service.setText(selectedTrainer.getService());
+                    charges.setText(selectedTrainer.getCharges());
                 }
             });
             return row;
@@ -94,11 +89,11 @@ public class TrainersController implements Initializable {
     }
 
     @FXML
-    private void addTrainer(ActionEvent event) {
-        String trnname = tname.getText();
-        String trnmobile = tmobile.getText();
-        String trnservice = tservice.getText();
-        String trncharges = tcharges.getText();
+    private void addTrainer() {
+        String trnname = name.getText();
+        String trnmobile = mobile.getText();
+        String trnservice = service.getText();
+        String trncharges = charges.getText();
 
         try {
             pst = con.prepareStatement("INSERT INTO trainers(Name, Mobile, Service, Charges) VALUES (?, ?, ?, ?)");
@@ -117,7 +112,7 @@ public class TrainersController implements Initializable {
     }
 
     @FXML
-    private void deleteTrainer(ActionEvent event) {
+    private void deleteTrainer() {
         try {
             if (myIndex >= 0) {
                 pst = con.prepareStatement("DELETE FROM trainers WHERE Id = ?");
@@ -134,11 +129,11 @@ public class TrainersController implements Initializable {
     }
 
     @FXML
-    private void updateTrainer(ActionEvent event) {
-        String trnname = tname.getText();
-        String trnmobile = tmobile.getText();
-        String trnservice = tservice.getText();
-        String trncharges = tcharges.getText();
+    private void updateTrainer() {
+        String trnname = name.getText();
+        String trnmobile = mobile.getText();
+        String trnservice = service.getText();
+        String trncharges = charges.getText();
 
         try {
             if (myIndex >= 0) {
@@ -160,10 +155,10 @@ public class TrainersController implements Initializable {
     }
 
     private void clearFormFields() {
-        tname.setText("");
-        tmobile.setText("");
-        tservice.setText("");
-        tcharges.setText("");
-        tname.requestFocus();
+        name.setText("");
+        mobile.setText("");
+        service.setText("");
+        charges.setText("");
+        name.requestFocus();
     }
 }

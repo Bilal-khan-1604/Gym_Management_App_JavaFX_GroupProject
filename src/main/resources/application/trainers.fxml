@@ -11,86 +11,101 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" styleClass="bgAnchorPane" stylesheets="@../styles/base.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gymManagement.application.TrainersController">
-   <children>
-      <AnchorPane layoutX="27.333333333333332" layoutY="44.0" prefHeight="500.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <ScrollPane layoutX="183.0" layoutY="51.0">
-               <content>
-                  <TableView fx:id="table" prefHeight="439.0" prefWidth="418.5" style="-fx-background-color: #c0c0c0;" styleClass="data-table" stylesheets="@../styles/base.css">
-                    <columns>
-                      <TableColumn fx:id="idt" minWidth="0.0" prefWidth="30.0" resizable="false" style="-fx-background-color: #d3d3d3;" text="ID" />
-                      <TableColumn fx:id="namet" minWidth="0.0" prefWidth="180" resizable="false" style="-fx-background-color: #d3d3d3;" text="NAME" />
-                        <TableColumn fx:id="mobt" minWidth="0.0" prefWidth="122.5" resizable="false" style="-fx-background-color: #d3d3d3;" text="MOBILE" />
-                        <TableColumn fx:id="servicet" minWidth="0.0" prefWidth="86" resizable="false" style="-fx-background-color: #d3d3d3;" text="SERVICE" />
-                        <TableColumn fx:id="chargest" prefWidth="80" resizable="false" style="-fx-background-color: #d3d3d3;" text="Charges" />
-                    </columns>
-                  </TableView>
-               </content>
-            </ScrollPane>
-            <AnchorPane layoutX="6.0" layoutY="51.0" opacity="0.72" prefHeight="439.0" prefWidth="170.0" style="-fx-border-color: white;" AnchorPane.leftAnchor="6.0">
-               <children>
-                  <Label layoutX="15.0" layoutY="58.0" text="Name :" textFill="WHITE" underline="true">
-                     <font>
-                        <Font name="Times New Roman" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="15.0" layoutY="122.0" text="Mobile :" textFill="WHITE" underline="true">
-                     <font>
-                        <Font name="Times New Roman" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="15.0" layoutY="186.0" text="Service :" textFill="WHITE" underline="true">
-                     <font>
-                        <Font name="Times New Roman" size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="tname" layoutX="15.0" layoutY="80.0" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: white;" />
-                  <TextField fx:id="tmobile" layoutX="15.0" layoutY="144.0" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: white;" />
-                  <Button fx:id="addbtn" layoutX="30.0" layoutY="307.0" mnemonicParsing="false" onAction="#add" prefHeight="31.0" prefWidth="107.0" style="-fx-background-color: #8a2be2;" text="ADD" textFill="#f4efef" />
-                  <Button fx:id="delete" layoutX="31.0" layoutY="396.0" mnemonicParsing="false" onAction="#delete" prefHeight="31.0" prefWidth="107.0" style="-fx-background-color: #8a2be2;" text="DELETE" textFill="#f4efef" />
-                  <Button fx:id="updatebtn" layoutX="30.0" layoutY="350.0" mnemonicParsing="false" onAction="#update" prefHeight="31.0" prefWidth="107.0" style="-fx-background-color: #8a2be2;" text="UPDATE" textFill="#f4efef" />
-                  <TextField fx:id="tservice" layoutX="15.0" layoutY="208.0" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: white;" />
-                  <Label alignment="CENTER" layoutX="10.0" layoutY="9.0" prefHeight="32.0" prefWidth="148.0" style="-fx-background-color: white;" text="ADMIN PANEL">
-                     <font>
-                        <Font name="Georgia" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="15.0" layoutY="250.0" text="Charges :" textFill="WHITE" underline="true">
-                     <font>
-                        <Font name="Times New Roman" size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="tcharges" layoutX="15.0" layoutY="272.0" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: white;" />
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="13.248046875" layoutY="8.0">
-               <children>
-                  <Label layoutX="7.0" layoutY="-10.0" prefHeight="54.0" prefWidth="131.0" text="LEGACY" textFill="WHITE" underline="true">
-                     <font>
-                        <Font name="Gabriola" size="44.0" />
-                     </font>
-                     <effect>
-                        <DropShadow height="12.24" radius="6.35" width="15.16">
-                           <color>
-                              <Color red="0.6929824352264404" green="0.6929824352264404" blue="0.6929824352264404" />
-                           </color>
-                        </DropShadow>
-                     </effect>
-                  </Label>
-                  <Label layoutX="132.0" layoutY="9.0" text="THE FITNESS CLUB" textFill="WHITE">
-                     <font>
-                        <Font name="FontAwesome" size="20.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" layoutX="479.751953125" layoutY="10.0" text="Trainers Tab" textAlignment="CENTER" textFill="#f6f2f2">
-                     <font>
-                        <Font name="Calibri Italic" size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+            prefWidth="650.0" styleClass="bgAnchorPane" stylesheets="@../styles/base.css"
+            xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="gymManagement.application.TrainersController">
+   <AnchorPane layoutX="27.333333333333332" layoutY="44.0" prefHeight="500.0" prefWidth="650.0"
+               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="42.0"
+               AnchorPane.topAnchor="0.0">
+      <ScrollPane layoutX="183.0" layoutY="51.0">
+         <TableView fx:id="table" prefHeight="439.0" prefWidth="418.5" style="-fx-background-color: #c0c0c0;"
+                    styleClass="data-table" stylesheets="@../styles/base.css">
+            <columns>
+               <TableColumn fx:id="id_column" minWidth="0.0" prefWidth="30.0" resizable="false"
+                            style="-fx-background-color: #d3d3d3;" text="ID"/>
+               <TableColumn fx:id="name_column" minWidth="0.0" prefWidth="180" resizable="false"
+                            style="-fx-background-color: #d3d3d3;" text="NAME"/>
+               <TableColumn fx:id="mobile_column" minWidth="0.0" prefWidth="122.5" resizable="false"
+                            style="-fx-background-color: #d3d3d3;" text="MOBILE"/>
+               <TableColumn fx:id="service_column" minWidth="0.0" prefWidth="86" resizable="false"
+                            style="-fx-background-color: #d3d3d3;" text="SERVICE"/>
+               <TableColumn fx:id="charges_column" resizable="false"
+                            style="-fx-background-color: #d3d3d3;" text="Charges"/>
+            </columns>
+         </TableView>
+      </ScrollPane>
+      <AnchorPane layoutX="6.0" layoutY="51.0" opacity="0.72" prefHeight="439.0" prefWidth="170.0"
+                  style="-fx-border-color: white;" AnchorPane.leftAnchor="6.0">
+         <Label layoutX="15.0" layoutY="58.0" text="Name :" textFill="WHITE" underline="true">
+            <font>
+               <Font name="Times New Roman" size="18.0"/>
+            </font>
+         </Label>
+         <Label layoutX="15.0" layoutY="122.0" text="Mobile :" textFill="WHITE" underline="true">
+            <font>
+               <Font name="Times New Roman" size="18.0"/>
+            </font>
+         </Label>
+         <Label layoutX="15.0" layoutY="186.0" text="Service :" textFill="WHITE" underline="true">
+            <font>
+               <Font name="Times New Roman" size="18.0"/>
+            </font>
+         </Label>
+         <TextField fx:id="name" layoutX="15.0" layoutY="80.0" prefHeight="25.0" prefWidth="135.0"
+                    style="-fx-background-color: white;"/>
+         <TextField fx:id="mobile" layoutX="15.0" layoutY="144.0" prefHeight="25.0" prefWidth="135.0"
+                    style="-fx-background-color: white;"/>
+         <Button layoutX="30.0" layoutY="307.0" mnemonicParsing="false" onAction="#addTrainer"
+                 prefHeight="31.0" prefWidth="107.0" style="-fx-background-color: #8a2be2;" text="ADD"
+                 textFill="#f4efef"/>
+         <Button layoutX="31.0" layoutY="396.0" mnemonicParsing="false" onAction="#deleteTrainer"
+                 prefHeight="31.0" prefWidth="107.0" style="-fx-background-color: #8a2be2;" text="DELETE"
+                 textFill="#f4efef"/>
+         <Button layoutX="30.0" layoutY="350.0" mnemonicParsing="false" onAction="#updateTrainer"
+                 prefHeight="31.0" prefWidth="107.0" style="-fx-background-color: #8a2be2;" text="UPDATE"
+                 textFill="#f4efef"/>
+         <TextField fx:id="service" layoutX="15.0" layoutY="208.0" prefHeight="25.0" prefWidth="135.0"
+                    style="-fx-background-color: white;"/>
+         <Label alignment="CENTER" layoutX="10.0" layoutY="9.0" prefHeight="32.0" prefWidth="148.0"
+                style="-fx-background-color: white;" text="ADMIN PANEL">
+            <font>
+               <Font name="Georgia" size="18.0"/>
+            </font>
+         </Label>
+         <Label layoutX="15.0" layoutY="250.0" text="Charges :" textFill="WHITE" underline="true">
+            <font>
+               <Font name="Times New Roman" size="18.0"/>
+            </font>
+         </Label>
+         <TextField fx:id="charges" layoutX="15.0" layoutY="272.0" prefHeight="25.0" prefWidth="135.0"
+                    style="-fx-background-color: white;"/>
       </AnchorPane>
-   </children>
+      <AnchorPane layoutX="13.248046875" layoutY="8.0">
+         <Label layoutX="7.0" layoutY="-10.0" prefHeight="54.0" prefWidth="131.0" text="LEGACY" textFill="WHITE"
+                underline="true">
+            <font>
+               <Font name="Gabriola" size="44.0"/>
+            </font>
+            <effect>
+               <DropShadow height="12.24" radius="6.35" width="15.16">
+                  <color>
+                     <Color red="0.6929824352264404" green="0.6929824352264404" blue="0.6929824352264404"/>
+                  </color>
+               </DropShadow>
+            </effect>
+         </Label>
+         <Label layoutX="132.0" layoutY="9.0" text="THE FITNESS CLUB" textFill="WHITE">
+            <font>
+               <Font name="FontAwesome" size="20.0"/>
+            </font>
+         </Label>
+         <Label alignment="CENTER" layoutX="479.751953125" layoutY="10.0" text="Trainers Tab"
+                textAlignment="CENTER" textFill="#f6f2f2">
+            <font>
+               <Font name="Calibri Italic" size="20.0"/>
+            </font>
+         </Label>
+      </AnchorPane>
+   </AnchorPane>
 </AnchorPane>
