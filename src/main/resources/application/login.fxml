@@ -10,7 +10,7 @@
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gymManagement.application.LoginAndNewAccountController">
    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" styleClass="main-pane" stylesheets="@../styles/base.css">
-      <AnchorPane layoutY="27.0" prefHeight="475.0" prefWidth="312.0" styleClass="login-l" stylesheets="@../styles/application.css">
+      <AnchorPane layoutY="27.0" prefHeight="475.0" prefWidth="312.0" styleClass="login-l">
          <TextField fx:id="usernameField" layoutX="66.0" layoutY="143.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="221.0" promptText="User" styleClass="user-in" stylesheets="@../styles/base.css" />
          <PasswordField fx:id="passwordField" layoutX="66.0" layoutY="199.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="221.0" promptText="Password" styleClass="user-pass" stylesheets="@../styles/base.css" />
          <Button layoutX="69.0" layoutY="261.0" mnemonicParsing="false" onAction="#onLogin" prefHeight="40.0" prefWidth="215.0" style="-fx-background-color: #9c00da;" styleClass="login" stylesheets="@../styles/base.css" text="Log in">
@@ -29,13 +29,13 @@
             </font>
          </Label>
       </AnchorPane>
-      <AnchorPane layoutX="319.0" layoutY="25.0" prefHeight="475.0" prefWidth="331.0" styleClass="login-r" stylesheets="@../styles/application.css">
+      <AnchorPane layoutX="319.0" layoutY="25.0" prefHeight="475.0" prefWidth="331.0" styleClass="login-r">
          <Label layoutX="42.0" layoutY="208.0" prefHeight="28.0" prefWidth="261.0" text="    Fitness Club" textFill="WHITE">
             <font>
                <Font name="Copperplate Gothic Bold" size="26.0" />
             </font>
          </Label>
-         <Label layoutX="42.0" layoutY="123.0" prefHeight="73.0" prefWidth="277.0" style="-fx-text-fill: #9c00da;" styleClass="logo" stylesheets="@../styles/application.css" text="Legacy " textFill="#9c00da">
+         <Label layoutX="42.0" layoutY="123.0" prefHeight="73.0" prefWidth="277.0" style="-fx-text-fill: #9c00da;" styleClass="logo" text="Legacy " textFill="#9c00da">
             <font>
                <Font name="Copperplate Gothic Bold" size="64.0" />
             </font>
