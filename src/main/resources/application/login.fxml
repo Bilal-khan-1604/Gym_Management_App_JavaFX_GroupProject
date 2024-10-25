@@ -8,48 +8,36 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0"
-           prefWidth="650.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
-           fx:controller="gymManagement.application.LoginAndNewAccountController">
-   <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="main-pane" stylesheets="@../styles/application.css">
-      <AnchorPane layoutY="27.0" prefHeight="475.0" prefWidth="312.0" styleClass="login-l"
-                  stylesheets="@../styles/application.css">
-         <TextField fx:id="usernameField" layoutX="66.0" layoutY="143.0" prefHeight="30.0" prefWidth="221.0"
-                    promptText="User" styleClass="user-in" stylesheets="@../styles/application.css"/>
-         <PasswordField fx:id="passwordField" layoutX="66.0" layoutY="199.0" prefHeight="30.0" prefWidth="221.0"
-                        promptText="Password" styleClass="user-pass" stylesheets="@../styles/application.css"/>
-         <Button layoutX="137.0" layoutY="261.0" mnemonicParsing="false" onAction="#onLogin"
-                 prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #9c00da;" styleClass="login"
-                 stylesheets="@../styles/application.css" text="login">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gymManagement.application.LoginAndNewAccountController">
+   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" styleClass="main-pane" stylesheets="@../styles/base.css">
+      <AnchorPane layoutY="27.0" prefHeight="475.0" prefWidth="312.0" styleClass="login-l" stylesheets="@../styles/application.css">
+         <TextField fx:id="usernameField" layoutX="66.0" layoutY="143.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="221.0" promptText="User" styleClass="user-in" stylesheets="@../styles/base.css" />
+         <PasswordField fx:id="passwordField" layoutX="66.0" layoutY="199.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="221.0" promptText="Password" styleClass="user-pass" stylesheets="@../styles/base.css" />
+         <Button layoutX="69.0" layoutY="261.0" mnemonicParsing="false" onAction="#onLogin" prefHeight="40.0" prefWidth="215.0" style="-fx-background-color: #9c00da;" styleClass="login" stylesheets="@../styles/base.css" text="Log in">
             <font>
-               <Font size="18.0"/>
+               <Font size="18.0" />
             </font>
          </Button>
-         <Button layoutX="79.0" layoutY="315.0" mnemonicParsing="false"
-                 onAction="#onCreateAccount" style="-fx-background-color: transparent;"
-                 text="Wanna create new Account ?">
+         <Button layoutX="122.0" layoutY="301.0" mnemonicParsing="false" onAction="#onCreateAccount" style="-fx-background-color: transparent;" styleClass="signupForLFC" stylesheets="@../styles/base.css" text="Signup for LFC" textFill="#748eff">
             <font>
-               <Font size="14.0"/>
+               <Font size="14.0" />
             </font>
          </Button>
-         <Label fx:id="statusLabel" layoutX="12.0" layoutY="403.0" prefHeight="30.0" prefWidth="431.0"
-                textFill="#ff3939">
+         <Label fx:id="statusLabel" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="82.0" layoutY="330.0" prefHeight="70.0" prefWidth="190.0" textFill="WHITE" textOverrun="CLIP" wrapText="true">
             <font>
-               <Font name="Century Schoolbook" size="18.0"/>
+               <Font size="14.0" />
             </font>
          </Label>
       </AnchorPane>
-      <AnchorPane layoutX="319.0" layoutY="25.0" prefHeight="475.0" prefWidth="331.0" styleClass="login-r"
-                  stylesheets="@../styles/application.css">
-         <Label layoutX="42.0" layoutY="208.0" prefHeight="28.0" prefWidth="261.0" text="    Fitness Club">
+      <AnchorPane layoutX="319.0" layoutY="25.0" prefHeight="475.0" prefWidth="331.0" styleClass="login-r" stylesheets="@../styles/application.css">
+         <Label layoutX="42.0" layoutY="208.0" prefHeight="28.0" prefWidth="261.0" text="    Fitness Club" textFill="WHITE">
             <font>
-               <Font name="Copperplate Gothic Bold" size="26.0"/>
+               <Font name="Copperplate Gothic Bold" size="26.0" />
             </font>
          </Label>
-         <Label layoutX="42.0" layoutY="123.0" prefHeight="73.0" prefWidth="277.0" style="-fx-text-fill: #9c00da;"
-                styleClass="logo" stylesheets="@../styles/application.css" text="Legacy " textFill="#9c00da">
+         <Label layoutX="42.0" layoutY="123.0" prefHeight="73.0" prefWidth="277.0" style="-fx-text-fill: #9c00da;" styleClass="logo" stylesheets="@../styles/application.css" text="Legacy " textFill="#9c00da">
             <font>
-               <Font name="Copperplate Gothic Bold" size="64.0"/>
+               <Font name="Copperplate Gothic Bold" size="64.0" />
             </font>
          </Label>
       </AnchorPane>
