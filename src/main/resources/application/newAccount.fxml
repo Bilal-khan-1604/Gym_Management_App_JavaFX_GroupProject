@@ -58,7 +58,7 @@
             </Label>
          </AnchorPane>
          <AnchorPane layoutX="146.0" layoutY="10.0">
-            <TextField layoutY="2.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter your name" style="-fx-border-width: 1em;" />
+            <TextField fx:id="usernameField" layoutY="2.0" prefHeight="25.0" prefWidth="216.0" promptText="Enter your name" style="-fx-border-width: 1em;" />
             <DatePicker fx:id="accountDatePicker" layoutX="3.0" layoutY="46.0" prefHeight="25.0" prefWidth="216.0" promptText="Select date" />
             <AnchorPane layoutX="3.0" layoutY="92.0">
                <RadioButton fx:id="maleRadioButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="85.0" text="Male" textFill="WHITE">
@@ -82,17 +82,16 @@
             <PasswordField fx:id="confirmPasswordField" layoutX="3.0" layoutY="172.0" prefHeight="25.0" prefWidth="216.0" promptText="Re-enter your password" />
             <PasswordField fx:id="adminPasswordField" layoutX="3.0" layoutY="210.0" onAction="#onCreateAction" prefHeight="25.0" prefWidth="216.0" promptText="Admin password" />
          </AnchorPane>
-         <Button layoutX="131.0" layoutY="287.0" mnemonicParsing="false" onAction="#onCreateAction" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: #9c00da; -fx-cursor: hand;" styleClass="createAccount" stylesheets="@../styles/base.css" text="Create">
+         <Button layoutX="131.0" layoutY="296.0" mnemonicParsing="false" onAction="#onCreateAction" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: #9c00da; -fx-cursor: hand;" styleClass="createAccount" stylesheets="@../styles/base.css" text="Create">
             <font>
                <Font size="18.0" />
             </font>
          </Button>
+         <Label fx:id="createStatusLabel" alignment="TOP_LEFT" layoutX="148.0" layoutY="254.0" prefHeight="35.0" prefWidth="216.0" textFill="#e97979" textOverrun="CLIP" wrapText="true" />
       </AnchorPane>
-      <Label fx:id="createStatusLabel" layoutX="114.0" layoutY="102.0" prefHeight="17.0" prefWidth="418.0" />
-      <ImageView fitHeight="43.0" fitWidth="47.0" layoutX="31.0" layoutY="26.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" styleClass="backButton">
-         <image>
-            <Image url="@../images_and_icons/back.png" />
-         </image>
+      <ImageView fitHeight="43.0" fitWidth="47.0" layoutX="31.0" layoutY="26.0" onMouseClicked="#goBack"
+                 pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;" styleClass="backButton">
+         <Image url="@../images_and_icons/back.png"/>
       </ImageView>
    </AnchorPane>
 </StackPane>
