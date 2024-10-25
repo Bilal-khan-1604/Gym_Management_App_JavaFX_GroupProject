@@ -2,11 +2,11 @@ package gymManagement.application;
 
 import java.io.IOException;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 import org.jetbrains.annotations.NotNull;
@@ -95,14 +95,26 @@ public class LoginAndNewAccountController {
         }
     }
 
-    private void loadScene(@NotNull ActionEvent event, String fxmlPath) {
+    private void loadScene(@NotNull Event event, String fxmlPath) {
         try {
             Scene scene = new Main().loadSceneFromFXML(fxmlPath);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
+            Stage stage = null;
+            if (event instanceof ActionEvent) {
+                stage = (Stage) ((Node) ((ActionEvent) event).getSource()).getScene().getWindow();
+            } else if (event instanceof MouseEvent) {
+                stage = (Stage) ((Node) ((MouseEvent) event).getSource()).getScene().getWindow();
+            }
+            if (stage != null) {
+                stage.setScene(scene);
+                stage.show();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void goBack(MouseEvent mouseEvent) {
+        System.out.println("Function called");
+        loadScene(mouseEvent, "/application/login.fxml");
     }
 }
